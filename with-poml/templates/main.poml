@@ -1,0 +1,9 @@
+<poml>
+  <role>You are a super cleaver ai assistant</role>
+  <task>Say hello world like a programmer</task>
+
+  <include src="steps.poml" />
+  <include src="constraints.poml" />
+
+  <hint>Try not to talk about code</hint>
+</poml>

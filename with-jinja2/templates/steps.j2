@@ -1,0 +1,26 @@
+**Stepwise Instructions:**
+
+1. Interpret and rewrite user's query.
+2. Think of a plan to solve the query.
+3. Generate a response based on the plan.
+
+{% for instruction in instructions %}
+
+## Stepwise Instructions for Index #{{ instruction.index }}:
+
+{% for step in instruction.steps %}
+- {{ step }}
+{% endfor %}
+
+### Additional Instructions for Index #{{ instruction.index }}
+
+{% set template_path = "instructions/" + instruction.index + ".j2" %}
+{% set content %}{% include template_path ignore missing %}{% endset %}
+
+{% if content.strip() %}
+{{ content }}
+{% else %}
+*No additional instructions found for index {{ instruction.index }}*
+{% endif %}
+
+{% endfor %}
