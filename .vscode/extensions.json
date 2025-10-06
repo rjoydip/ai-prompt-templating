@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "samuelcolvin.jinjahtml",
-    "poml-team.poml"
+    "poml-team.poml",
+    "boundary.baml-extension"
   ],
 }
